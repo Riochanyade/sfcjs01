@@ -5,7 +5,140 @@
     <title>情報基礎２第２回 </title>
   </head>
   <body>
-    
-    
+      　<h1>b要素</h1>
+    <p>
+        <p>HTML <b> :HTML の <b> 要素は、特別な重要性や関連性を伴わないで通常と
+            文体の異なるテキストの範囲を表します。
+            一般的に、要約中のキーワード、レビュー文内での製品名などの部分。
+            または、その他の表記上太字で記述される通例のある箇所などに用います。
+            記事の各段落のリード文をマークする場合にも適しています。</p>
+        <p>使用例：
+ <p>
+  This article describes several <b>text-level</b> elements. It explains their usage in an <b>HTML</b> document.   
+</p>
+<h1>q要素</h1>
+<p>q 要素 は、その内容がインラインの引用であることを表します。この要素は、段落やセクションをまたがない短い引用のためのものです。</p>
+<p>使用例：Everytime Kenny is killed, Stan will announce 
+   <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
+     Oh my God, you/they killed Kenny!
+   </q>.
+</p>
+<h1>s要素</h1>
+<p>
+    HTMLの打ち消し要素 s はその範囲のテキストが既に正確でなくなった事を表す為に用います。これは殆どの環境で、打ち消し線を伴うスタイルでレンダリングされます。
+</p>
+<p>
+   使用例： <s>本日のおすすめ: サーモンカルパッチョ</s>　<ins>売り切れ</ins><br />
+</p>
+<h1>strong要素</h1>
+<p>strong 要素strongは重要なテキストを表します。ほとんどのブラウザーのデフォルトスタイルでは、太字で描画するように指定されています。
+    </p>
+    <p>使用例：When doing x it is <strong>imperative</strong> to do y before proceeding.
+    </p>
+<p>
+    <h1>time要素</h1>
+    HTML time 要素は、24 時間制の時刻またはグレゴリオ暦の正確な日付 (時刻やタイムゾーンを伴うことも可能) を表します。
+        </p>
+    <p>使用例：コンサートは <time>20:00</time> に始まります。
+    </p>
+    <h1>u要素</h1>
+    <p>
+        u 要素は、内包するテキストのベースラインの下部にアンダーライン（下線）をレンダリングします。
+    </p>
+    <p>使用例：<u>今日のスペシャルメニュー</u>
+    </p>
+    <h1>button要素</h1>
+    <p>HTML の button 要素は、クリック可能なボタンを表します。
+        </p>
+        <p>使用例：<button name="button">Click me</button>
+        </p>
+        <h1>input要素</h1>
+        <p>HTML input　要素は、ユーザからデータを受け取るための、Web ベースのフォーム用のインタラクティブなコントロールを作成するために使用します。input　の動作は、type 属性の値に応じて大きく異なります。
+        </p>
+        <p>使用例：<p>A common form that includes input tags</p>
+<form action="getform.php" method="get">
+    <label>First name: <input type="text" /></label><br />
+     <label>Last name: <input type="text" /></label><br />
+        <label>E-mail: <input type="email" /></label><br />
+<input type="submit" value="Submit" />
+</form></p>
+
+<h1>CSS属性</h1>
+<h2>*</h2>
+<p>アスタリスク（*）ですべての要素にスタイルを適用することができます。</p>
+<p>* {
+
+  color:red;
+
+}
+</p>
+
+<h2>.x</h2>
+<p>クラス名を指定した要素にスタイルが適用されます。</p>
+<p>.sample {
+  font-size:18px;
+  color:red;
+}
+</p>
+<h2>#x</h2>
+<p>基本的には先ほどのクラスと一緒です。ただidの場合は1つの要素にしか適用されません。</p>
+<p>#sample {
+  font-size:16px;
+}
+</p>
+
+<h2>EF</h2>
+<p>セレクタを半角スペースで区切ると、ある要素の下の階層にある要素にスタイルを適用します。</p>
+<p>p strong {
+  font-size:16px;
+}
+</p>
+
+<h2>E>F</h2>
+<p>セレクタを「>」で区切ると、ある要素の直下の階層にある要素にスタイルを適用します。</p>
+<p>div.sample > a {
+  font-size:18px;
+  font-weight:bold;
+}
+</p>
+
+　<h2>E+F</h2>
+<p>h4要素に隣接しているp要素の文字が赤になります。</p>
+<p>h4 + p {
+  color:red;
+  font-weight:bold;
+}
+
+    </p>
+    <h2>E~F</h2>
+    <p>「~」である要素の後にある要素にスタイルを適用することができます。</p>
+<p><p>h4要素のの前なので適用されません</p>
+<h4>H4要素</h4>
+<p>h4要素の後にあると適用されます</p>
+<p>h4要素の後にあると適用されます</p>
+</p>
+
+<h2>first-letter （最初に現れる文字にだけ適用）</h2>
+<p>雑誌の記事でたまにありそうな。wikipediaのトップページみたいな感じです。</p>
+<p>p:first-letter {
+  font-weight:bold;
+  font-size:32px;
+}
+</p>
+<h2>first-line　（最初の行にだけ適用）</h2>
+<p>p:first-line {
+  font-weight:bold;
+  color:red;
+}
+sample
+</p>
+<h2> hover（オンマウス時に適用）</h2>
+<p>hoverといえばリンクですが、divでも利用できます。ただしIE6はダメです。</p>
+<p>1
+p:not(#sample) {
+  font-size:18px;
+}
+「sample」というidを付けられたpタグ</p>
+
   </body>
 </html>
